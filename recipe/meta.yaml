@@ -35,7 +35,7 @@ requirements:
     - ipython
     - nbformat
     - matplotlib-base
-    - pymatgen
+    - pymatgen <=2023.9.10
     - abipy >=0.2.0
     - pytest
 
