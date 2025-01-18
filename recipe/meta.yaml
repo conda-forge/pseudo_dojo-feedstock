@@ -13,31 +13,35 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - six
-    - numpy
+    - numpy <1.25
     - scipy
     - tabulate
     - pandas
     - jsonschema
     - atomicfile
     - periodic-table-plotter
-    - monty
+    - monty <2023
     - ipython
     - nbformat
     - matplotlib-base
-    - pymatgen
+    - pymatgen <=2023.9.10
     - abipy >=0.2.0
+    - pytest
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pseudo_dojo
 
