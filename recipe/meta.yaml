@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - six
-    - numpy
+    - numpy <1.26
     - scipy
     - tabulate
     - pandas
