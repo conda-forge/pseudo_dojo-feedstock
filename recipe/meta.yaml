@@ -37,6 +37,7 @@ requirements:
     - matplotlib-base
     - pymatgen
     - abipy >=0.2.0
+    - pytest
 
 test:
   requires:
